@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y apache2-utils sqlite3
 
 # Copy the updated webui.db to the desired location
 # RUN cp /webui.db /app/backend/data/webui.db
-COPY /cache/caches/webui.db /app/backend/data/webui.db
+COPY webui.db /app/backend/data/webui.db
 COPY env.py /app/backend/open_webui/env.py
 
 RUN chmod -R 777 /app/backend/static
