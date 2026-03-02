@@ -24,4 +24,4 @@ RUN chmod -R 777 /app/backend/static
 RUN chmod -R 777 /app/backend/data
 RUN chmod -R 777 /app/cache
 
-CMD ["sh", "-c", "uvicorn open_webui.main:app --host 0.0.0.0 --port ${PORT}"]
+CMD ["sh", "-c", "uvicorn open_webui.main:app --host 0.0.0.0 --port ${PORT:-10000}"]
