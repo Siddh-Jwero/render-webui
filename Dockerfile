@@ -27,4 +27,4 @@ RUN chmod -R 777 /app/cache
 
 EXPOSE 7860
 
-CMD ["bash", "start.sh"]
+CMD ["sh", "-c", "uvicorn open_webui.main:app --host 0.0.0.0 --port ${PORT}"]
